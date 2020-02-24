@@ -22,7 +22,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-   // NgbModule.forRoot()
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
