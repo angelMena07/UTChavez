@@ -7,9 +7,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 // Declarar tus rutas aca
 const routes: Routes = [
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
-  { path: 'home', loadChildren: () => import('./components/home/home.module').then(m => m.HomeModule) },
 ];
 
 

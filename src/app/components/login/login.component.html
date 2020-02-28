@@ -8,7 +8,7 @@
 
 <body>
     <div class="login">
-        <form class="form">
+        <form class="form" #formLogin="ngForm" (submit)="onLogin(formLogin)">
 
             <div align="center" class="rounded mx-auto d-block">
                 <img src="assets/logo/ut.png" id="icon" alt="User Icon" width="300" height="160" />
@@ -17,15 +17,27 @@
             <!--Icon -->
             <br>
             <p align="center" class="m-t">Sistema escolar</p>
+            <ul class="error" role="alert" *ngIf="isError">
+                <li> Acceso incorrecto
+            </ul>
+            <div class="loader" *ngIf="loading">Cargando
+            </div>
+            <div>
+                <input [(ngModel)]="email" #emailtext="ngModel" type="text" formcontrolName="email" [ngModelOptions]="{standalone: true}" placeholder="Email/Matrícula" required>
 
-            <input type="email" id="exampleInputEmail1" placeholder="Email/Matrícula" class="">
-            <input type="password" placeholder="Contraseña">
-            <button class="btn btn-primary btn-block btn-large" type="submit">Ingresar</button>
+            </div>
+            <div class="error" *ngIf="emailtext.touched && !emailtext.valid">
+                <p align="center" *ngIf="emailtext.errors.required">Email is required</p>
+            </div>
+            <div>
+                <input [(ngModel)]="password" #passwordtext="ngModel" type="password" formcontrolName="password" [ngModelOptions]="{standalone: true}" placeholder="Contraseña" required>
+            </div>
+            <div class="error" *ngIf="passwordtext.touched && !passwordtext.valid">
+                <p align="center" *ngIf="passwordtext.errors.required">Password is required</p>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block btn-large">Ingresar</button>
             <br>
             <p align="center" class="m-t"> <small>Universidad Tecnológica de Cancún</small> </p>
-
-
-
         </form>
         <br>
 
