@@ -10,7 +10,7 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthService } from './components/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
-
+import { NavbarComponent } from './components/navbar/navbar.component';
 // import { AuthService } from './auth.service';
 
 
@@ -18,7 +18,8 @@ import { HeaderComponent } from './components/header/header.component';
   declarations: [
     AppComponent,
     routingComponents,
-  HeaderComponent
+  HeaderComponent,
+  NavbarComponent
   ],
   imports: [
     BrowserModule,
