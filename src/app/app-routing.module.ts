@@ -6,12 +6,16 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { DashboardComponent } from './containers/dashboard/dashboard.component';
+import { ClasesComponent } from './containers/clases/clases.component';
 
 
-// Declarar tus rutas aca
+// Declaracion de las rutas
 const routes: Routes = [
-  {path: '', redirectTo: '/login', pathMatch: 'full'},
   {path: 'login', component: LoginComponent},
+  {path: 'home', component: DashboardComponent},
+  {path: 'clases', component: ClasesComponent},
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
 ];
 
 

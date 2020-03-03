@@ -11,6 +11,9 @@ import { AuthService } from './components/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { DashboardComponent } from './containers/dashboard/dashboard.component';
+import { ClasesComponent } from './containers/clases/clases.component';
+import { VideosComponent } from './components/videos/videos.component';
 // import { AuthService } from './auth.service';
 
 
@@ -19,7 +22,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AppComponent,
     routingComponents,
   HeaderComponent,
-  NavbarComponent
+  NavbarComponent,
+  DashboardComponent,
+  ClasesComponent,
+  VideosComponent
   ],
   imports: [
     BrowserModule,
