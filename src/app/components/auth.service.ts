@@ -31,7 +31,15 @@ export class AuthService {
      err => reject(err));
    });
   }
-  logout() {
-  return this.firebaseAuth.auth.signOut();
+  logout(): Promise<boolean> {
+    return new Promise((resolve, reject) => {
+      this.firebaseAuth.auth.signOut().then(
+        () => {
+          resolve(true);
+        }
+      ).catch(
+        () => resolve(false)
+      );
+    });
   }
 }

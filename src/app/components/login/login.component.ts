@@ -42,10 +42,11 @@ loading = false;
   }
   onLogout() {
     this.authService.logout();
+    this.router.navigate(['/login']);
   }
   onLoginRedirect(): void {
     /// MENA ESPECIFICA LA RUTA, CUANDO TE LOGUEES TE LLEVA A ELLA
-    this.router.navigate(['/']);
+    this.router.navigate(['/home']);
   }
   onIsError(): void {
     this.loading = false;
