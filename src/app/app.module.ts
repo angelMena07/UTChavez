@@ -1,30 +1,42 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './components/login/login.component';
-import { RegisterComponent } from './components/register/register.component';
+// configuraremos nuestro módulo de aplicación con AngularFireModule y AngularFireAuthModule.
+import { AngularFireModule } from 'angularfire2';
+import { environment } from '../environments/environment';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AuthService } from './components/auth.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { DashboardComponent } from './containers/dashboard/dashboard.component';
+import { ClasesComponent } from './containers/clases/clases.component';
+import { VideosComponent } from './components/videos/videos.component';
+// import { AuthService } from './auth.service';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
-    HeaderComponent,
-    FooterComponent,
-    SidebarComponent
+    routingComponents,
+  HeaderComponent,
+  NavbarComponent,
+  DashboardComponent,
+  ClasesComponent,
+  VideosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
