@@ -1,0 +1,26 @@
+<app-sidebar>
+</app-sidebar>
+<div id="page-wrapper" class="gray-bg">
+    <app-navbar></app-navbar>
+    <div class="container">
+        <div class="jumbotron bg-light">
+            <hr class="my-4">
+
+            <section class="card card-info text-white bg-dark mb-3">
+                <section class="video-container">
+                    <youtube-player [videoId]="id" width="854" height="510" (ready)="savePlayer($event)" (change)="onStateChange($event)" [playerVars]="playerVars">
+                    </youtube-player>
+                </section>
+                <div class="card-body"></div>
+            </section>
+            <button type="button" class="btn btn-primary" (click)="playVideo()">
+          Play
+        </button>
+            <button type="button" class="btn btn-danger" (click)="pauseVideo()">
+          Pause
+        </button>
+
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

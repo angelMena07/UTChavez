@@ -14,6 +14,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './containers/dashboard/dashboard.component';
 import { ClasesComponent } from './containers/clases/clases.component';
 import { VideosComponent } from './components/videos/videos.component';
+import { VideoconferenciaComponent } from './components/videoconferencia/videoconferencia.component';
+import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
 // import { AuthService } from './auth.service';
 
 
@@ -25,7 +27,8 @@ import { VideosComponent } from './components/videos/videos.component';
   NavbarComponent,
   DashboardComponent,
   ClasesComponent,
-  VideosComponent
+  VideosComponent,
+  VideoconferenciaComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,8 @@ import { VideosComponent } from './components/videos/videos.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxYoutubePlayerModule.forRoot()
 
   ],
   providers: [AuthService],
