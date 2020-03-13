@@ -16,6 +16,7 @@ import { ClasesComponent } from './containers/clases/clases.component';
 import { VideosComponent } from './components/videos/videos.component';
 import { VideoconferenciaComponent } from './components/videoconferencia/videoconferencia.component';
 import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
+import { RafavideosComponent } from './components/videosprofes/rafavideos/rafavideos.component';
 // import { AuthService } from './auth.service';
 
 
@@ -28,7 +29,8 @@ import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
   DashboardComponent,
   ClasesComponent,
   VideosComponent,
-  VideoconferenciaComponent
+  VideoconferenciaComponent,
+  RafavideosComponent
   ],
   imports: [
     BrowserModule,

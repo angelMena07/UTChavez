@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './containers/dashboard/dashboard.component';
 import { ClasesComponent } from './containers/clases/clases.component';
 import { VideoconferenciaComponent } from './components/videoconferencia/videoconferencia.component';
+import { RafavideosComponent } from './components/videosprofes/rafavideos/rafavideos.component';
 
 
 // Declaracion de las rutas
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path: 'home', component: DashboardComponent},
   {path: 'clases', component: ClasesComponent},
   {path: 'videoconferencia', component: VideoconferenciaComponent},
+  {path: 'clases/rafavideos', component: RafavideosComponent},
   {path: '', redirectTo: '/login', pathMatch: 'full'},
 ];
 
