@@ -3,7 +3,6 @@ import { DomSanitizer } from '@angular/platform-browser';
 @Component({
   selector: 'app-rafavideos',
   templateUrl: './rafavideos.component.html',
-  styleUrls: ['./rafavideos.component.css']
 })
 export class RafavideosComponent implements OnInit {
   title = 'Lista de videos Profesor Rafael';
