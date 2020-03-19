@@ -2,7 +2,6 @@ import { HomeComponent } from './components/home/home.component';
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
-import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -20,6 +19,7 @@ const routes: Routes = [
   {path: 'videoconferencia', component: VideoconferenciaComponent},
   {path: 'clases/rafavideos', component: RafavideosComponent},
   {path: '', redirectTo: '/login', pathMatch: 'full'},
+  { path: 'landingPage', loadChildren: () => import('./containers/landing-page/landing-page.module').then(m => m.LandingPageModule) },
 ];
 
 
@@ -28,4 +28,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [ LoginComponent, SidebarComponent, FooterComponent, HeaderComponent, HomeComponent, NavbarComponent];
+export const routingComponents = [ LoginComponent, SidebarComponent, FooterComponent, HomeComponent, NavbarComponent];

@@ -9,7 +9,6 @@ import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthService } from './components/auth.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HeaderComponent } from './components/header/header.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { DashboardComponent } from './containers/dashboard/dashboard.component';
 import { ClasesComponent } from './containers/clases/clases.component';
@@ -24,13 +23,13 @@ import { RafavideosComponent } from './components/videosprofes/rafavideos/rafavi
   declarations: [
     AppComponent,
     routingComponents,
-  HeaderComponent,
   NavbarComponent,
   DashboardComponent,
   ClasesComponent,
   VideosComponent,
   VideoconferenciaComponent,
   RafavideosComponent
+
   ],
   imports: [
     BrowserModule,
